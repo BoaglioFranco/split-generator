@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"os"
@@ -31,11 +32,10 @@ type EventValueSettings struct {
 	Properties map[string]interface{} `json:"properties"`
 }
 
-func readConfig() Config {
-	jsonFile, err := os.Open("config.json")
-
+func readConfig(path string) (*Config, error) {
+	jsonFile, err := os.Open(path)
 	if err != nil {
-		fmt.Println(err)
+		return nil, errors.New(fmt.Sprintf("Failed to read config file %s", path))
 	}
 	defer jsonFile.Close()
 
@@ -46,5 +46,5 @@ func readConfig() Config {
 
 	fmt.Println(cfg)
 
-	return cfg
+	return &cfg, nil
 }
