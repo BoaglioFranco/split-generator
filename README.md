@@ -4,9 +4,9 @@
 
 ```
 go install github.com/BoaglioFranco/split-generator@latest
-split-generator path-to-your-config.json
 ```
 
+`split-generator path-to-your-config.json`
 
 ## Configuration Options
 
