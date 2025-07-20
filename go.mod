@@ -1,4 +1,4 @@
-module github.com/BoaglioFranco/generateImpressions
+module github.com/BoaglioFranco/split-generator
 
 go 1.22.1
 
