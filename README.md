@@ -1,5 +1,13 @@
 # Split.io Impressions and events generator
 
+## Installation and usage
+
+```
+go install github.com/BoaglioFranco/split-generator@latest
+split-generator path-to-your-config.json
+```
+
+
 ## Configuration Options
 
 The script is configured via a `.json` configuration file. The following options are supported:
